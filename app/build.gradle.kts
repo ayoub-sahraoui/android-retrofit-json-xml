@@ -70,18 +70,18 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.retrofit.converter.gson)
 
-
     // SOAP Support
-    implementation("com.google.code.ksoap2-android:ksoap2-android:3.6.4")
-    implementation("com.google.code.ksoap2-android:ksoap2-android-assembly:3.6.4")
-    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
-
-    implementation("com.squareup.retrofit2:converter-simplexml:2.9.0")
+    implementation("com.squareup.retrofit2:converter-simplexml:2.9.0") {
+        exclude(group = "xpp3")
+        exclude(group = "stax")
+        exclude(group = "stax-api")
+    }
     implementation("org.simpleframework:simple-xml:2.7.1") {
         exclude(group = "stax")
         exclude(group = "stax-api")
         exclude(group = "xpp3")
     }
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
 
     // Logging Interceptor
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
@@ -94,4 +94,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("org.simpleframework:simple-xml:2.7.1")
+    }
 }
