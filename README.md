@@ -1,1 +1,1 @@
-![me](https://github.com/ayoub-sahraoui/android-retrofit-json-xml/blob/main/me.gif)
+![me](https://github.com/ayoub-sahraoui/android-retrofit-json-xml/blob/main/demo.gif)
