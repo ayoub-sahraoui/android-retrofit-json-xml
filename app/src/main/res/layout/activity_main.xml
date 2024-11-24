@@ -6,34 +6,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/nom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="nom"/>
-    <EditText
-        android:id="@+id/prenom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="prenom"/>
-    <EditText
-        android:id="@+id/naissane"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="naissance"/>
-
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/goToComptes"
+        android:layout_marginTop="300dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="cree un etudiant"
-/>
-
-
-
-
+        android:text="Comptes" />
 
 
 </LinearLayout>
